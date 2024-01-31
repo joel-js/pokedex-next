@@ -9,8 +9,8 @@ const siteRoutes = [
     label: "Home",
   },
   {
-    href: "/posts",
-    label: "Posts",
+    href: "/pokemon",
+    label: "Pokedex",
   },
 ];
 

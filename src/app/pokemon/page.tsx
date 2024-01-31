@@ -1,9 +1,8 @@
 import PostsList from "@/components/posts-list";
 
 export default async function PostsPage() {
-  const randomNumber = Math.floor(Math.random() * 10) + 1;
   const response = await fetch(
-    `https://dummyjson.com/posts?limit=${randomNumber}`,
+    "https://jherr-pokemon.s3.us-west-1.amazonaws.com/index.json",
     {
       next: {
         revalidate: 3600,
@@ -11,12 +10,12 @@ export default async function PostsPage() {
     }
   );
   const data = await response.json();
-
+  console.log(data);
   return (
     <main className="text-center pt-16 px-5">
-      <h1 className="text-5xl font-semibold mb-7">All posts</h1>
+      <h1 className="text-5xl font-semibold mb-7">All Pokemons</h1>
 
-      <PostsList posts={data.posts} />
+      <PostsList posts={data} />
     </main>
   );
 }

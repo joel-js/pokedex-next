@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "placehold.jp",
       },
+      {
+        protocol: "https",
+        hostname: "jherr-pokemon.s3.us-west-1.amazonaws.com"
+      }
     ],
   },
 };
